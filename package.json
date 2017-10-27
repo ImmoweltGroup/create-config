@@ -4,7 +4,8 @@
   "private": false,
   "author": "Immonet dev team <aegaeon@immonet.de> (https://immonet.de)",
   "license": "MIT",
-  "description": "Create a common structured and feature enriched config object for your NodeJS project",
+  "description":
+    "Create a common structured and feature enriched config object for your NodeJS project",
   "main": "./dist/",
   "engines": {
     "node": ">=8.8.1",
@@ -12,10 +13,15 @@
   },
   "keywords": [
     "config",
+    "create",
+    "create-config",
+    "project",
     "consistency",
-    "paths",
+    "dot-env",
     "env",
-    "environment"
+    "environment",
+    "path",
+    "util"
   ],
   "scripts": {
     "test": "yarn run lint && yarn run flow && yarn run jest:coverage",
@@ -30,9 +36,16 @@
     "dev": "nodemon --quiet --watch src --exec 'yarn run build'",
     "flow": "flow",
     "flow-typed": "flow-typed",
-    "flow-typed-install": "flow-typed install --ignoreDeps=bundled peer --overwrite",
+    "flow-typed-install":
+      "flow-typed install --ignoreDeps=bundled peer --overwrite",
+    "prepare": "npm run flow-typed-install || true",
+    "prepublishOnly": "npm run build",
+    "precommit": "lint-staged && npm test",
     "semantic-release":
       "semantic-release pre && npm publish && semantic-release post"
+  },
+  "lint-staged": {
+    "**/*.{js,json,css}": ["prettier --write", "git add"]
   },
   "dependencies": {
     "@immowelt/babel-preset-immowelt-node": "^1.1.0",
@@ -48,14 +61,18 @@
   "devDependencies": {
     "@immowelt/eslint-config-immowelt-react": "^2.0.2",
     "@immowelt/jest-preset-node": "^1.0.0",
+    "@immowelt/styleguide-javascript": "^1.0.6",
     "@inkdpixels/commit-analyzer": "^1.0.1",
     "@inkdpixels/release-notes-generator": "^1.0.1",
     "eslint": "^4.9.0",
     "flow-bin": "^0.57.3",
     "flow-typed": "^2.2.1",
+    "husky": "^0.14.3",
     "jest": "^21.0.2",
     "nodemon": "^1.11.0",
     "mock-fs": "^4.4.1",
+    "lint-staged": "^4.1.2",
+    "prettier": "^1.6.1",
     "rimraf": "^2.6.1",
     "sinon": "^3.0.0",
     "semantic-release": "^8.2.0"
@@ -63,18 +80,6 @@
   "jest": {
     "preset": "@immowelt/jest-preset-node"
   },
-  "keywords": [
-    "config",
-    "create",
-    "create-config",
-    "project",
-    "consistency",
-    "dot-env",
-    "env",
-    "environment",
-    "path",
-    "util"
-  ],
   "release": {
     "analyzeCommits": "@inkdpixels/commit-analyzer",
     "generateNotes": "@inkdpixels/release-notes-generator"
