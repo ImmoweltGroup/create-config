@@ -30,7 +30,9 @@
     "dev": "nodemon --quiet --watch src --exec 'yarn run build'",
     "flow": "flow",
     "flow-typed": "flow-typed",
-    "flow-typed-install": "flow-typed install --ignoreDeps=bundled peer --overwrite"
+    "flow-typed-install": "flow-typed install --ignoreDeps=bundled peer --overwrite",
+    "semantic-release":
+      "semantic-release pre && npm publish && semantic-release post"
   },
   "dependencies": {
     "@immowelt/babel-preset-immowelt-node": "^1.1.0",
@@ -46,6 +48,8 @@
   "devDependencies": {
     "@immowelt/eslint-config-immowelt-react": "^2.0.2",
     "@immowelt/jest-preset-node": "^1.0.0",
+    "@inkdpixels/commit-analyzer": "^1.0.1",
+    "@inkdpixels/release-notes-generator": "^1.0.1",
     "eslint": "^4.9.0",
     "flow-bin": "^0.57.3",
     "flow-typed": "^2.2.1",
@@ -53,9 +57,30 @@
     "nodemon": "^1.11.0",
     "mock-fs": "^4.4.1",
     "rimraf": "^2.6.1",
-    "sinon": "^3.0.0"
+    "sinon": "^3.0.0",
+    "semantic-release": "^8.2.0"
   },
   "jest": {
     "preset": "@immowelt/jest-preset-node"
+  },
+  "keywords": [
+    "config",
+    "create",
+    "create-config",
+    "project",
+    "consistency",
+    "dot-env",
+    "env",
+    "environment",
+    "path",
+    "util"
+  ],
+  "release": {
+    "analyzeCommits": "@inkdpixels/commit-analyzer",
+    "generateNotes": "@inkdpixels/release-notes-generator"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ImmoweltGroup/create-config.git"
   }
 }
