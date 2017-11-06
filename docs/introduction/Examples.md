@@ -18,7 +18,7 @@ The config object looks like:
 {
     //
     // A pre-configured `env` object containing the system environment variables, as well as `boolean` values
-    // like `isProduction`, `isDev` amd `isTest` based upon the `NODE_ENV` environment variable.
+    // like `isProduction`, `isDev` and `isTest` based upon the `NODE_ENV` environment variable.
     //
     // All key/value pairs of the `requiredVariablesByKey` option will be merged into this object as well.
     //
