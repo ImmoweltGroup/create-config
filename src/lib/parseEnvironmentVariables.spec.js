@@ -39,10 +39,7 @@ describe('loadEnvironmentOverrides()', () => {
 
     expect(env.isDev).toBe(false);
 
-    env = parseEnvironmentVariables(
-      {},
-      {NODE_ENV: 'development', ENVIRONMENT: 'dev'}
-    );
+    env = parseEnvironmentVariables({}, {NODE_ENV: 'development'});
     expect(env.isDev).toBe(true);
   });
 

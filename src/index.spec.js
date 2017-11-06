@@ -13,7 +13,6 @@ describe('createConfig()', () => {
     parseEnvironmentVariables = sinon
       .stub(utils, 'parseEnvironmentVariables')
       .returns({
-        ENVIRONMENT: 'dev',
         NODE_ENV: 'development'
       });
     loadEnvironmentOverrides = sinon

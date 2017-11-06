@@ -5,7 +5,6 @@ export type RequiredVariablesByKeyType = {
 };
 export type ParsedEnvironmentType = {
   NODE_ENV: string,
-  ENVIRONMENT: string,
   [string]: string
 };
 export type EnvironmentType = {
