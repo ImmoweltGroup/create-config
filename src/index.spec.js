@@ -1,30 +1,27 @@
 // @flow
 
-const sinon = require('sinon');
-const utils = require('./lib/');
+jest.mock('./lib/');
+
+const utils: any = require('./lib/');
 const createConfig = require('./index.js');
 
 describe('createConfig()', () => {
-  let parseEnvironmentVariables;
-  let loadEnvironmentOverrides;
-  let createPathUtils;
-
   beforeEach(() => {
-    parseEnvironmentVariables = sinon
-      .stub(utils, 'parseEnvironmentVariables')
-      .returns({
-        NODE_ENV: 'development'
-      });
-    loadEnvironmentOverrides = sinon
-      .stub(utils, 'loadEnvironmentOverrides')
-      .returns(() => ({foo: 'overrideFoo'}));
-    createPathUtils = sinon.spy(utils, 'createPathUtils');
+    utils.parseEnvironmentVariables.mockReturnValue({
+      NODE_ENV: 'development'
+    });
+    utils.loadEnvironmentOverrides.mockReturnValue(
+      jest.fn(() => ({
+        foo: 'overrideFoo'
+      }))
+    );
+    utils.createPathUtils.mockReturnValue({
+      root: jest.fn()
+    });
   });
 
   afterEach(() => {
-    parseEnvironmentVariables.restore();
-    loadEnvironmentOverrides.restore();
-    createPathUtils.restore();
+    jest.clearAllMocks();
   });
 
   it('should be a function.', () => {
@@ -42,7 +39,7 @@ describe('createConfig()', () => {
   it('should call the utils.createPathUtils function and attach the returned value to the config.', () => {
     const config = createConfig({rootDirPath: '/foo'});
 
-    expect(createPathUtils.callCount).toBe(1);
+    expect(utils.createPathUtils).toHaveBeenCalledTimes(1);
     expect(typeof config.paths).toBe('object');
     expect(typeof config.paths.root).toBe('function');
   });
@@ -55,15 +52,18 @@ describe('createConfig()', () => {
       }
     });
 
+    expect(utils.loadEnvironmentOverrides).toHaveBeenCalledTimes(1);
     expect(config.foo).toBe('overrideFoo');
   });
 
   it('should call and apply the extend function option to the finalized config object.', () => {
+    const extend = jest.fn(() => ({foo: 'extendFoo'}));
     const config = createConfig({
       rootDirPath: '/foo',
-      extend: () => ({foo: 'extendFoo'})
+      extend
     });
 
+    expect(extend).toHaveBeenCalledTimes(1);
     expect(config.foo).toBe('extendFoo');
   });
 });
