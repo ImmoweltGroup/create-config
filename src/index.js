@@ -73,8 +73,6 @@ function createConfig(opts: OptionsType): ConfigType {
     );
   }
 
-  logger.info(`Create configuration for ENVIRONMENT "${env.ENVIRONMENT}"...`);
-
   //
   // Utilities and environment globals.
   // All globals added here must also be added to your projects `.eslintrc`
