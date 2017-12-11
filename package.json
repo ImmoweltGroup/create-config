@@ -4,8 +4,7 @@
   "private": false,
   "author": "Immonet dev team <aegaeon@immonet.de> (https://immonet.de)",
   "license": "MIT",
-  "description":
-    "Create a common structured and feature enriched config object for your NodeJS project",
+  "description": "Create a common structured and feature enriched config object for your NodeJS project",
   "main": "./dist/",
   "engines": {
     "node": ">=8.8.1",
@@ -36,16 +35,17 @@
     "dev": "nodemon --quiet --watch src --exec 'yarn run build'",
     "flow": "flow",
     "flow-typed": "flow-typed",
-    "flow-typed-install":
-      "flow-typed install --ignoreDeps=bundled peer --overwrite",
+    "flow-typed-install": "flow-typed install --ignoreDeps=bundled peer --overwrite",
     "prepare": "npm run flow-typed-install || true",
     "prepublishOnly": "npm run build",
     "precommit": "lint-staged && npm test",
-    "semantic-release":
-      "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "lint-staged": {
-    "**/*.{js,json,css}": ["prettier --write", "git add"]
+    "**/*.{js,json,css}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "dependencies": {
     "@immowelt/babel-preset-immowelt-node": "^1.1.0",
