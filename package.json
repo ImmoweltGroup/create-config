@@ -8,8 +8,7 @@
     "Create a common structured and feature enriched config object for your NodeJS project",
   "main": "./dist/",
   "engines": {
-    "node": ">=8.8.1",
-    "yarn": ">=1.0.2"
+    "node": ">=8.8.1"
   },
   "keywords": [
     "config",
@@ -38,8 +37,8 @@
     "flow-typed": "flow-typed",
     "flow-typed-install":
       "flow-typed install --ignoreDeps=bundled peer --overwrite",
-    "prepare": "npm run flow-typed-install || true",
-    "prepublishOnly": "npm run build",
+    "prepare": "yarn run flow-typed-install || true",
+    "prepublishOnly": "yarn run build",
     "precommit": "lint-staged && npm test",
     "semantic-release":
       "semantic-release pre && npm publish && semantic-release post"

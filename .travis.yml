@@ -5,6 +5,8 @@ cache:
     - node_modules
 notifications:
   email: false
+install:
+  - yarn install
 after_success:
   - npm run semantic-release
 branches:
