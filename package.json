@@ -58,7 +58,7 @@
     "node-version": "^1.1.0"
   },
   "devDependencies": {
-    "@immowelt/eslint-config-immowelt-react": "2.0.3",
+    "@immowelt/eslint-config-immowelt-react": "2.0.4",
     "@immowelt/jest-preset-node": "1.0.1",
     "@immowelt/styleguide-javascript": "1.0.11",
     "@inkdpixels/commit-analyzer": "1.0.1",
