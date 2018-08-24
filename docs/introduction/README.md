@@ -1,4 +1,4 @@
 ## Introduction
 
-* [Motivation](Motivation.md)
-* [Examples](Examples.md)
+0. [Motivation](Motivation.md)
+0. [Examples](Examples.md)
