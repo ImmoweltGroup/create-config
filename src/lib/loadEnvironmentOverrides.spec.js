@@ -28,9 +28,7 @@ describe('loadEnvironmentOverrides()', () => {
 
   it('should return an default overrides function.', () => {
     // $FlowFixMe: suppressing this error since it is a test case
-    expect(loadEnvironmentOverrides()).toBe(
-      loadEnvironmentOverrides.defaultOverrides
-    );
+    expect(loadEnvironmentOverrides()).toBe(loadEnvironmentOverrides.defaultOverrides);
   });
 
   it('should require the passed file and return its contents.', () => {

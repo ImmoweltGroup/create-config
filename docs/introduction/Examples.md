@@ -4,7 +4,7 @@ Creating a config object is as simple as eating a banana, the only required opti
 
 ```js
 // config/index.js
-const createConfig = require('@immowelt/util-create-project-config/');
+const createConfig = require('@immowelt/create-config/');
 const path = require('path');
 
 module.exports = createConfig({

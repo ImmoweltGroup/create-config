@@ -4,7 +4,7 @@
 The `rootDirPath` should be an absolute path pointing to the root folder of your application, e.g. if your projects config file is located in `config/index.js` we recommend you to use the `path.resolve` function like
 
 ```js
-const createConfig = require('@immowelt/util-create-project-config/');
+const createConfig = require('@immowelt/create-config/');
 const path = require('path');
 
 module.exports = createConfig({
@@ -21,7 +21,7 @@ Once the `createConfig` function detects the `NODE_ENV` being set to a value tha
 
 ```js
 // config/index.js
-const createConfig = require('@immowelt/util-create-project-config/');
+const createConfig = require('@immowelt/create-config/');
 const path = require('path');
 
 const config = createConfig({
@@ -54,7 +54,7 @@ A key map which each key matches the name of the targeted environment variable a
 
 ```js
 // config/index.js
-const createConfig = require('@immowelt/util-create-project-config/');
+const createConfig = require('@immowelt/create-config/');
 const path = require('path');
 const {str} = require('envalid');
 
@@ -73,7 +73,7 @@ A key map which should be used in case you use webpack, it includes values like 
 A key map which each key represents the name of the helper function to create and the value the relative basepath of it. E.g.
 
 ```js
-const createConfig = require('@immowelt/util-create-project-config/');
+const createConfig = require('@immowelt/create-config/');
 const path = require('path');
 
 const config = createConfig({
@@ -104,12 +104,12 @@ console.log(config.paths.fooBar('baz'));
 
 #### `options.extend`
 In case you want to extend your config object, you can specify an extend function that will be called with the intermediate generated config object.
-The function should return an object and it will automatically be merged with the intermediate config inside the `util-create-project-config` package.
+The function should return an object and it will automatically be merged with the intermediate config inside the `create-config` package.
 
 E.g.
 
 ```js
-const createConfig = require('@immowelt/util-create-project-config/');
+const createConfig = require('@immowelt/create-config/');
 const path = require('path');
 
 const config = createConfig({

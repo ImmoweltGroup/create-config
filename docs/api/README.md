@@ -13,5 +13,5 @@ This package exports a single function, import it like this:
 #### ES5 (CommonJS)
 
 ```js
-const createConfig = require('@immowelt/util-create-project-config/');
+const createConfig = require('@immowelt/create-config/');
 ```

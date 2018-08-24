@@ -4,7 +4,7 @@ export type OverridesFnType = (config: Object) => Object;
 
 const fs = require('fs');
 const safeEval = require('node-eval');
-const logger = require('log-fancy')().enforceLogging();
+const {warn} = require('debug-logger')('create-config');
 const defaultOverrides: OverridesFnType = () => ({});
 
 /**
@@ -17,27 +17,21 @@ const defaultOverrides: OverridesFnType = () => ({});
 function loadOverrides(path: string): OverridesFnType {
   let exports: void | OverridesFnType | {default: OverridesFnType};
 
-  //
   // Using `require` breaks the tests when using mock-fs in combination with Jest, since somewhere in the stack a call to
   // `node_modules/babel-core` gets made which is not available in the mocked file system.
-  //
   if (path && path.length) {
     const str = fs.readFileSync(path, 'utf-8');
 
     exports = safeEval(str, path);
   }
 
-  const fn: void | OverridesFnType = exports
-    ? exports.default || exports
-    : undefined;
+  const fn: void | OverridesFnType = exports ? exports.default || exports : undefined;
 
   if (typeof fn === 'function') {
     return fn;
   }
 
-  logger.warn(
-    `Export of config override in "${path}" is not a function but of type "${typeof fn}".`
-  );
+  warn(`Export of config override in "${path}" is not a function but of type "${typeof fn}".`);
 
   return defaultOverrides;
 }

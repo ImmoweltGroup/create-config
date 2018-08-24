@@ -1,4 +1,4 @@
-# create-config
+# @immowelt/create-config
 
 [![Powered by Immowelt](https://img.shields.io/badge/powered%20by-immowelt-yellow.svg?colorB=ffb200)](https://stackshare.io/immowelt-group/)
 [![Build Status](https://travis-ci.org/ImmoweltGroup/create-config.svg?branch=master)](https://travis-ci.org/ImmoweltGroup/create-config)
@@ -10,17 +10,16 @@
 > Create a consistently structured and feature enriched config object for your NodeJS package/project.
 
 ## Installation
+
 To install the latest stable version:
 
 ```sh
-# Using npm
-npm install --save create-config
-
-# or using yarn
+# Using yarn
 yarn add create-config
 ```
 
 ## Features
+
 * Consistent structure of your project's configuration object
 * Environment variable validation and fallbacks (using the fancy [envalid](https://github.com/af/envalid) library)
 * Configurable path helper functions
@@ -29,12 +28,14 @@ yarn add create-config
 * Optional extension of the finalized configuration object
 
 ## Documentation
+
 * [Introduction](/docs/introduction/README.md)
 * [API](/docs/api/README.md)
-* [FAQ](/docs/api/FAQ.md)
 
 ## Contributing
+
 See the `CONTRIBUTING.md` file at the root of the repository.
 
 ## Licensing
+
 See the `LICENSE` file at the root of the repository.

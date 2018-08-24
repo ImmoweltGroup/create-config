@@ -1,9 +1,8 @@
 # Table of Contents
 
-* [Read Me](/README.md)
-* [Introduction](/docs/introduction/README.md)
-  * [Motivation](/docs/introduction/Motivation.md)
-  * [Examples](/docs/introduction/Examples.md)
-* [API Reference](/docs/api/README.md)
-  * [createConfig](/docs/api/createConfig.md)
-* [FAQ](/docs/FAQ.md)
+0. [README](/README.md)
+0. [Introduction](/docs/introduction/README.md)
+    0. [Motivation](/docs/introduction/Motivation.md)
+    0. [Examples](/docs/introduction/Examples.md)
+0. [API Reference](/docs/api/README.md)
+    0. [createConfig](/docs/api/createConfig.md)
