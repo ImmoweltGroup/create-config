@@ -4,7 +4,7 @@
   "private": false,
   "author": "Immonet dev team <aegaeon@immonet.de> (https://immonet.de)",
   "license": "MIT",
-  "description": "Create a common structured and feature enriched config object for your NodeJS project",
+  "description": "Create a common structured and feature enriched config object for your NodeJS project.",
   "main": "./dist/",
   "engines": {
     "node": ">=8.11.4",
