@@ -36,7 +36,7 @@
     "release": "semantic-release"
   },
   "dependencies": {
-    "@immowelt/babel-preset-immowelt-node": "1.1.0",
+    "@immowelt/babel-preset-immowelt-node": "1.1.1",
     "@immowelt/eslint-config-immowelt-react": "2.1.1",
     "babel-cli": "6.26.0",
     "debug-logger": "0.4.1",
