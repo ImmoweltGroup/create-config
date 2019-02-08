@@ -53,7 +53,7 @@
     "flow-typed": "2.5.1",
     "jest": "23.6.0",
     "mock-fs": "4.8.0",
-    "nodemon": "1.18.9",
+    "nodemon": "1.18.10",
     "prettier": "1.16.4",
     "rimraf": "2.6.3",
     "semantic-release": "13.4.1"
