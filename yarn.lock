@@ -4265,9 +4265,9 @@ mocha@^4.0.1:
     mkdirp "0.5.1"
     supports-color "4.4.0"
 
-mock-fs@4.10.0:
-  version "4.10.0"
-  resolved "https://registry.yarnpkg.com/mock-fs/-/mock-fs-4.10.0.tgz#1d017f797416c9f4879dd58ee9438d8b9323a731"
+mock-fs@4.10.1:
+  version "4.10.1"
+  resolved "https://registry.yarnpkg.com/mock-fs/-/mock-fs-4.10.1.tgz#50a07a20114a6cdb119f35762f61f46266a1e323"
 
 modify-values@^1.0.0:
   version "1.0.0"
