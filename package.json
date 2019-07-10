@@ -40,7 +40,7 @@
     "@immowelt/eslint-config-immowelt-react": "2.1.1",
     "babel-cli": "6.26.0",
     "debug-logger": "0.4.1",
-    "envalid": "4.2.2",
+    "envalid": "5.0.0",
     "lodash.merge": "4.6.2",
     "lodash.omit": "4.5.0",
     "node-eval": "2.0.0"

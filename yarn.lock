@@ -1760,9 +1760,9 @@ env-ci@^1.0.0:
     execa "^0.10.0"
     java-properties "^0.2.9"
 
-envalid@4.2.2:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/envalid/-/envalid-4.2.2.tgz#3ed23b3e42c987b4105b43789d8eb526538c025d"
+envalid@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/envalid/-/envalid-5.0.0.tgz#0dff9302c645977b8a620278620c67a939c9ee6f"
   dependencies:
     chalk "^2.4.1"
     dotenv "^6.2.0"
