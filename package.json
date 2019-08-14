@@ -55,7 +55,7 @@
     "mock-fs": "4.10.1",
     "nodemon": "1.19.1",
     "prettier": "1.18.2",
-    "rimraf": "2.6.3",
+    "rimraf": "2.7.0",
     "semantic-release": "13.4.1"
   },
   "jest": {
