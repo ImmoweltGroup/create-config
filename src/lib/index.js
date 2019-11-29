@@ -1,7 +1,11 @@
 // @flow
 
+const createPathUtils = require('./createPathUtils');
+const loadEnvironmentOverrides = require('./loadEnvironmentOverrides');
+const parseEnvironmentVariables = require('./parseEnvironmentVariables');
+
 module.exports = {
-  createPathUtils: require('./createPathUtils.js'),
-  loadEnvironmentOverrides: require('./loadEnvironmentOverrides.js'),
-  parseEnvironmentVariables: require('./parseEnvironmentVariables.js')
+  createPathUtils,
+  loadEnvironmentOverrides,
+  parseEnvironmentVariables
 };

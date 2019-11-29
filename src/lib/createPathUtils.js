@@ -27,8 +27,7 @@ function createPathUtils(rootDirPath: string = '/', additionalPathsByKey: Additi
   const paths: PathsType = {root};
 
   Object.keys(additionalPathsByKey).forEach(key => {
-    const path = additionalPathsByKey[key];
-    paths[key] = root.bind(null, path);
+    paths[key] = root.bind(null, additionalPathsByKey[key]);
   });
 
   return paths;

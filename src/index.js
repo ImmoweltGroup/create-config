@@ -1,7 +1,7 @@
 // @flow
 
-import type {PathsType} from './lib/createPathUtils.js';
-import type {EnvironmentType} from './lib/parseEnvironmentVariables.js';
+import type {PathsType} from './lib/createPathUtils';
+import type {EnvironmentType} from './lib/parseEnvironmentVariables';
 
 export type OptionsType = {
   rootDirPath: string,
@@ -61,7 +61,6 @@ function createConfig(opts: OptionsType): ConfigType {
     'extend'
   ]);
   let config = Object.assign({}, rest, {env});
-
 
   // Utilities and environment globals.
   // All globals added here must also be added to your projects `.eslintrc`
