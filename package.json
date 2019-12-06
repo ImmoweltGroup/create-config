@@ -43,7 +43,7 @@
     "node-eval": "2.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "7.7.4",
+    "@babel/cli": "7.7.5",
     "@babel/core": "7.7.4",
     "@babel/preset-flow": "7.7.4",
     "@immowelt/eslint-config-immowelt-base": "1.2.0",
