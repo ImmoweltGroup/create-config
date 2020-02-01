@@ -2280,10 +2280,10 @@ env-paths@^1.0.0:
   resolved "https://registry.yarnpkg.com/env-paths/-/env-paths-1.0.0.tgz#4168133b42bb05c38a35b1ae4397c8298ab369e0"
   integrity sha1-QWgTO0K7BcOKNbGuQ5fIKYqzaeA=
 
-envalid@6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/envalid/-/envalid-6.0.0.tgz#fc55f068344f858ab35767641de40707e070c808"
-  integrity sha512-ervvE+KHy69NmJI1iEcBCkH9dlL5GaS6e4rbP2ohMKPjE2TLuq6E4tWEJojShpHqBz1k6OFgwEJOPTak3Tg5ow==
+envalid@6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/envalid/-/envalid-6.0.1.tgz#f9e80aab4ec0202a90ae7c57a428f20ab422bd01"
+  integrity sha512-o2+xxQhpp7NSjrSeAJautFVYeNb6MUpEceVVuMoSEfgp9oq4XMb9fp3HODvZuh5Sg9zmrG3a5nClVaY1XqOdlg==
   dependencies:
     chalk "^3.0.0"
     dotenv "^8.2.0"
