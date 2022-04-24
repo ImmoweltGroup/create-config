@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "debug-logger": "0.4.1",
-    "envalid": "6.0.2",
+    "envalid": "7.3.1",
     "lodash.merge": "4.6.2",
     "lodash.omit": "4.5.0",
     "node-eval": "2.0.0"
